@@ -14,9 +14,12 @@ const stockItems = [
 // Create buttons using the receiveItems array and assign attributes and event listeners.
 // Add buttons to the receive-items container.
 stockItems.forEach(item => {
+    const rowElement = document.createElement('div')
+
     const buttonElement = document.createElement('button')
     buttonElement.textContent = item
     buttonElement.setAttribute('id', item)
     buttonElement.addEventListener('click', () => handleClick(item))
-    receiveItems.append(buttonElement)
+    rowElement.append(buttonElement)
+    receiveItems.append(rowElement)
 })
